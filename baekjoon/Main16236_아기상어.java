@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main16236_아기상어_승주 {
+public class Main16236_아기상어 {
 	public static int[] dy = {-1, 0, 1, 0};
 	public static int[] dx = {0, -1, 0, 1};
 	public static int[][] arr;
@@ -16,7 +16,6 @@ public class Main16236_아기상어_승주 {
 		Fish fish = list.get(0);
 		for (int j = 1; j < list.size(); j++) {
 			Fish f = list.get(j);
-//			System.out.println(fish.x+", "+fish.y+"/"+f.y+", "+f.x);
 			if(f.cnt > fish.cnt) continue;
 			else if(f.cnt < fish.cnt) {
 				fish = f;
@@ -31,12 +30,10 @@ public class Main16236_아기상어_승주 {
 		y = fish.y; //아기상어 위치 수정
 		x = fish.x;
 		ans += fish.cnt;
-//		System.out.println(y+", "+x+" 물고기 먹힘");
 		arr[y][x] = 0;
 		if(num==size) { //만약 잡아먹은 물고기 수가 아기상어의 크기와 같으면 아기상어 크기 +1
 			num = 0;
 			size++;
-//			System.out.println("아기상어 성장!! -> "+size);
 		}
 	}
 	
@@ -62,7 +59,6 @@ public class Main16236_아기상어_승주 {
 				}
 			}
 			if(!list.isEmpty()) { //근처에 크기가 작은 물고기가 있을 때
-//				System.out.println("작은 물고기가 있오요");
 				eat(list);
 				return;
 			}
@@ -100,10 +96,8 @@ public class Main16236_아기상어_승주 {
 		
 		if(flag) { //먹을 수 있는 물고기가 한마리라도 있을 때
 			while(check()) {
-//				System.out.println("먹을 물고기가 있어서 찾으러 간답");
 				find();
 				if(list.isEmpty()) break; //길이 막혀서 아무곳으로도 갈 수 없을 때
-//				System.out.println("시간= "+ans);
 			}
 		}
 		System.out.println(ans);
