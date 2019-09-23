@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main13458_시험감독_승주 {
+public class Main13458_시험감독 {
 	public static ArrayList<Integer> pp;
 	public static int n, b, c;
 	public static long min;
