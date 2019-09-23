@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Solution2382_미생물격리_승주 {
+public class Solution2382_미생물격리 {
 	public static ArrayList<Location> list;
 	public static Location[][] arr;
 	public static int[] dy = {-1, 1, 0, 0}; //상 하 좌 우
