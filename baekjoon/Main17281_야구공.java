@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main17281_야구공_승주 {
+public class Main17281_야구공 {
 	public static int[] turn = new int[9];
 	public static boolean[] check;
 	public static int[][] inning;
