@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Main8983_사냥꾼_승주 {
+public class Main8983_사냥꾼 {
 	public static List<Animal> ani = new ArrayList<>();
 	public static int[] pp;
 	public static int m, n, l, ans;
@@ -54,7 +54,6 @@ public class Main8983_사냥꾼_승주 {
 		});
 		find();
 		System.out.println(ans);
-
 	}
 	
 	static class Animal{
