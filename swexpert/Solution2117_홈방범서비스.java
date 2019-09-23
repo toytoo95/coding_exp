@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Solution2117_홈방범서비스_승주 {
+public class Solution2117_홈방범서비스 {
 	public static int n, m, max, hnum;
 	public static int[][] arr, house;
 
@@ -43,10 +43,8 @@ public class Solution2117_홈방범서비스_승주 {
 			hnum = num;
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n; j++) {
-//					int size = 1;
 					int size = n+1;
 					while(true) {
-//						if(size>n+1) break;
 						if(size<1) break;
 						else if(max >= hnum) { //더 이상 큰 수가 나올 수 없으므로 종료
 							i = n;
@@ -54,7 +52,6 @@ public class Solution2117_홈방범서비스_승주 {
 							break;
 						}
 						check(i, j, size);
-//						size++;
 						size--;
 					}
 				}
