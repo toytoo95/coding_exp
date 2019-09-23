@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main14500_테트로미노_승주 {
+public class Main14500_테트로미노 {
 	public static int[] dy = {1, 0, -1, 0};
 	public static int[] dx = {0, 1, 0, -1};
 	public static int[][] arr;
@@ -24,7 +24,7 @@ public class Main14500_테트로미노_승주 {
 	}
 	
 	public static void fuck(int y, int x) {
-		if(y+1<n && x+2<m) { //위아래 뻐큐
+		if(y+1<n && x+2<m) { //위아래
 			int val = 0;
 			for (int i = y; i < y+2; i++) {
 				for (int j = x; j < x+3; j++) {
@@ -34,7 +34,7 @@ public class Main14500_테트로미노_승주 {
 			max = Math.max(max, val-arr[y+1][x]-arr[y+1][x+2]); // ㅜ
 			max = Math.max(max, val-arr[y][x]-arr[y][x+2]); // ㅗ
 		}
-		if(y+2<n && x+1<m) { //양옆 뻐큐
+		if(y+2<n && x+1<m) { //양옆
 			int val = 0;
 			for (int i = y; i < y+3; i++) {
 				for (int j = x; j < x+2; j++) {
