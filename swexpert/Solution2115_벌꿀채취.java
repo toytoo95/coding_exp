@@ -2,12 +2,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution2115_벌꿀채취_승주 {
+public class Solution2115_벌꿀채취 {
 	public static int[][] honey, maxVal;
 	public static int n, m, c, max, mval, mbowl;
 	
 	public static void getBowl(int y, int x, int i, int sum, int doub, int mdouble) {
-//		System.out.println("좌표="+y+" "+(x+i));
 		for (int j = i; j < m; j++) {
 			if(honey[y][x+j]+sum>c) continue; //꿀통의 합이  c를 넘을 때
 			doub += honey[y][x+j]*honey[y][x+j];
@@ -55,9 +54,7 @@ public class Solution2115_벌꿀채취_승주 {
 				st = new StringTokenizer(br.readLine());
 				for (int j = 0; j < n; j++) {
 					honey[i][j] = Integer.parseInt(st.nextToken());
-//					System.out.print(honey[i][j]+" ");
 				}
-//				System.out.println();
 			}
 			
 			for (int i = 0; i < n; i++) {
@@ -65,14 +62,11 @@ public class Solution2115_벌꿀채취_승주 {
 					mbowl = 0;
 					getBowl(i, j, 0, 0, 0, 0); //
 					maxVal[i][j] = mbowl;
-//					System.out.print(mbowl+" ");
 				}
-//				System.out.println();
 			}
 			
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n-m+1; j++) {
-//					System.out.println("찾으러 간당 "+i+" "+j);
 					findMax(i, j, maxVal[i][j]);
 				}
 			}
