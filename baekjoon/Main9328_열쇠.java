@@ -23,7 +23,7 @@ import java.util.Scanner;
 	* 3 문열고 들어가서 문서 찾기(bfs)
 	*/
 
-public class Baekjoon9328_열쇠_승주 {
+public class Baekjoon9328_열쇠 {
 	public static char[][] arr;
 	public static boolean[][] visit;
 	public static ArrayList<Character> key;
