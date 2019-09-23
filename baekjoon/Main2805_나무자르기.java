@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main2805_나무자르기_승주 {
+public class Main2805_나무자르기 {
 	public static ArrayList<Integer> list = new ArrayList<>();
 	public static long n, m, ans;
 	
