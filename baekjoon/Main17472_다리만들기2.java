@@ -105,10 +105,7 @@ public class Main17472_다리만들기2 {
 			else if(map[ny][nx]>1 && map[ny][nx]!=num && lo.len>1) {
 				Location ll = new Location(map[ny][nx], num, lo.len);
 				Location original = new Location(num, map[ny][nx], lo.len);
-				if(list.contains(ll) || list.contains(original)) {
-//					System.out.println("겹쳐서 빠짐");
-					continue; //이미 들어가있는 경로일 때
-				}
+				if(list.contains(ll) || list.contains(original)) continue; //이미 들어가있는 경로일 때
 				list.add(original);
 //				System.out.println(num+" "+map[ny][nx]+"안겹침");
 			}
@@ -121,7 +118,6 @@ public class Main17472_다리만들기2 {
 		Queue<Location> q = new LinkedList<>();
 		q.add(new Location(y, x));
 		map[y][x] = cnt;
-//		System.out.println("y="+y+", x="+x);
 		
 		while(!q.isEmpty()) {
 			Location lo = q.poll();
@@ -173,7 +169,6 @@ public class Main17472_다리만들기2 {
 		
 		ArrayList<Integer> island = new ArrayList<>();
 		dfs(island, 0, 0, inum-1);
-		dfs(island, 0, 0, inum);
 		
 		if(min==n*m+1) min = -1;
 		System.out.println(min);
